@@ -125,5 +125,5 @@ h1 {
 }
 
 @keyframes clignote {  
-  50% { opacity: 0; }
+  100% { opacity: 0; }
 }
