@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   maria_db:
-    container_name: gentil
+    container_name: oopjsgame
     image: mariadb:latest # version de l'image mysql
     networks:
       - combatGentil
@@ -14,7 +14,7 @@ services:
         MYSQL_USER: CF # votre nom d'utilisateur
         MYSQL_PASSWORD: digital2021 # votre mot de passe
   phpmyadmin:
-    container_name: heros
+    container_name: herosoopjs
     image: phpmyadmin/phpmyadmin:4.9 # version de l'image phpMyAdmin
     links:
       - maria_db # lien avec le mysql
@@ -28,7 +28,7 @@ services:
       - '9000:80' # le port pour accéder à phpMyAdmin -> localhost:9000
   # `webserver` service provides Apache + PHP
   webserver:
-    container_name : combat
+    container_name : combatoopjs
     build:
       context: .
       dockerfile: Dockerfile
